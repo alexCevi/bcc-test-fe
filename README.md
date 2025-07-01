@@ -2,6 +2,9 @@
 
 This is a React application built with Vite for managing certification requests as part of the Blue Collar Cloud assessment. The system supports both employees and supervisors, with clear role separation and workflows.
 
+## Backend API Used
+Please clone and run this Node Express API to fully test this frontend - https://github.com/alexCevi/bcc-test-be
+
 ## Features
 
 * **Role-Based Access Control**: Distinct interfaces and permissions for employees and supervisors, enforced at both UI and routing levels.
