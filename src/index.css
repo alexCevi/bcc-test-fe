@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+
+    /* Primary Blue Palette (based on rgb(0, 132, 255)) */
+    --primary-blue: 210 100% 50%;         /* #0084FF */
+    --primary-blue-light: 210 100% 70%;   /* lighter blue */
+    --primary-blue-dark: 210 100% 35%;    /* darker blue */
+    --primary-blue-muted: 210 60% 85%;    /* very light blue for backgrounds */
+
+    /* Green for stats */
+    --stat-green: 120 100% 50%;           /* #00FF01 */
+    --stat-green-dark: 120 100% 35%;      /* darker green */
+    --stat-green-light: 120 100% 80%;     /* lighter green */
+
+    /* Pink for high contrast */
+    --stat-pink: 300 100% 50%;            /* #FF00FE */
+    --stat-pink-light: 300 100% 80%;      /* lighter pink */
+    --stat-pink-dark: 300 100% 35%;       /* darker pink */
+
+    /* Orange for warning stats */
+    --stat-orange: 30 100% 50%;           /* #FF8000 */
+    --stat-orange-light: 30 100% 70%;     /* lighter orange */
+    --stat-orange-dark: 30 100% 40%;      /* darker orange */
+
+    /* Additional blue shades for flexibility */
+    --stat-blue-1: 210 100% 60%;          /* slightly lighter blue */
+    --stat-blue-2: 210 100% 40%;          /* slightly darker blue */
+    --stat-blue-3: 210 80% 30%;           /* deep blue */
+
+    /* Accent and utility colors */
+    --stat-accent: var(--stat-pink);
+    --stat-success: var(--stat-green);
+    --stat-warning: var(--stat-orange);
+    --stat-info: var(--primary-blue);
+
+
+    /* All Charts */
+    /* Blue Charts */
+    --chart-blue-1: var(--primary-blue);
+    --chart-blue-2: var(--stat-green);
+    --chart-blue-3: var(--stat-blue-1);
+    --chart-blue-2: var(--stat-blue-2);
+    --chart-blue-3: var(--stat-blue-3);
+    --chart-blue-4: var(--stat-blue-4);
+    --chart-blue-5: var(--stat-blue-5);
+    --chart-blue-6: var(--stat-blue-6);
+    --chart-blue-7: var(--stat-blue-7);
+
+    /* Green Charts */
+    --chart-green-1: var(--stat-green);
+    --chart-green-2: var(--stat-green-light);
+    --chart-green-3: var(--stat-green-dark);
+    --chart-green-4: var(--stat-green-light);
+    --chart-green-5: var(--stat-green-dark);
+    --chart-green-6: var(--stat-green-light);
+    --chart-green-7: var(--stat-green-dark);
+
+    /* Orange Charts */
+    --chart-orange-1: var(--stat-orange);
+    --chart-orange-2: var(--stat-orange-light);
+    --chart-orange-3: var(--stat-orange-dark);
+    --chart-orange-4: var(--stat-orange-light);
+    --chart-orange-5: var(--stat-orange-dark);
+    --chart-orange-6: var(--stat-orange-light);
+    --chart-orange-7: var(--stat-orange-dark);
+
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.ant-upload-select {
+    width: 100% !important;
+}
+
+#overview-select .ant-select-selector {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#overview-select .ant-select-selector {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#root-custom-app .ant-cell-no-padding {
+    padding: 0 !important;
+}
+
+/* .ant-table-thead tr th {
+    background-color: #ededed !important;
+    padding: 8px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+} */
+
+.ant-table-thead tr th {
+    padding: 8px !important;
+}
+
+.mapboxgl-ctrl-bottom-left{
+    display: none !important;
+}
+
+.mapboxgl-ctrl-bottom-right{
+    display: none !important;
+}
+
+.tabChangeHidden .ant-tabs-nav-wrap {
+    display: none !important;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  /* outline: none !important; */
+  /* box-shadow: 0 0 0 2px #ededed, 0 0 0 1px #fff !important; */
+  transition: box-shadow 0.2s;
+}
+
+
+.custom-no-padding {
+    padding: 0 !important;
+}
+
+.ant-table-thead tr th {
+    padding: 10px 13px !important;
+    font-size: 13px !important;
+}
